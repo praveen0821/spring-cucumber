@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-08-12T14:28:24.416Z",
+        "start_timestamp": "2022-08-12T14:49:05.191Z",
         "line": 4,
         "name": "client makes call to POST /baeldung",
         "description": "",
@@ -13,19 +13,19 @@
         "steps": [
           {
             "result": {
-              "duration": 208000000,
+              "duration": 234000000,
               "status": "passed"
             },
             "line": 5,
             "name": "the client calls /baeldung",
             "match": {
-              "location": "com.baeldung.definitions.StepDefsHelloTest.the_client_issues_POST_hello()"
+              "location": "com.cucumber.definitions.StepDefsHelloTest.the_client_issues_POST_hello()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 9000000,
+              "duration": 7000000,
               "status": "passed"
             },
             "line": 6,
@@ -37,7 +37,7 @@
                   "offset": 44
                 }
               ],
-              "location": "com.baeldung.definitions.StepDefsHelloTest.the_baeldung_client_receives_status_code_of(int,java.lang.String)"
+              "location": "com.cucumber.definitions.StepDefsHelloTest.the_baeldung_client_receives_status_code_of(int,java.lang.String)"
             },
             "keyword": "Then ",
             "doc_string": {
@@ -47,7 +47,7 @@
           },
           {
             "result": {
-              "duration": 125000000,
+              "duration": 65000000,
               "status": "passed"
             },
             "line": 10,
@@ -59,7 +59,7 @@
                   "offset": 35
                 }
               ],
-              "location": "com.baeldung.definitions.StepDefsVersionTest.the_client_receives_server_version_body(java.lang.String)"
+              "location": "com.cucumber.definitions.StepDefsVersionTest.the_client_receives_server_version_body(java.lang.String)"
             },
             "keyword": "And "
           }
@@ -71,7 +71,7 @@
         ]
       },
       {
-        "start_timestamp": "2022-08-12T14:28:24.872Z",
+        "start_timestamp": "2022-08-12T14:49:05.611Z",
         "line": 13,
         "name": "client makes call to GET /hello",
         "description": "",
@@ -81,13 +81,13 @@
         "steps": [
           {
             "result": {
-              "duration": 36000000,
+              "duration": 17000000,
               "status": "passed"
             },
             "line": 14,
             "name": "the client calls /hello",
             "match": {
-              "location": "com.baeldung.definitions.StepDefsHelloTest.the_client_issues_GET_hello()"
+              "location": "com.cucumber.definitions.StepDefsHelloTest.the_client_issues_GET_hello()"
             },
             "keyword": "Given "
           },
@@ -104,12 +104,13 @@
                   "offset": 35
                 }
               ],
-              "location": "com.baeldung.definitions.StepDefsHelloTest.the_client_receives_status_code_of(int)"
+              "location": "com.cucumber.definitions.StepDefsHelloTest.the_client_receives_status_code_of(int)"
             },
             "keyword": "When "
           },
           {
             "result": {
+              "duration": 1000000,
               "status": "passed"
             },
             "line": 16,
@@ -121,7 +122,7 @@
                   "offset": 35
                 }
               ],
-              "location": "com.baeldung.definitions.StepDefsVersionTest.the_client_receives_server_version_body(java.lang.String)"
+              "location": "com.cucumber.definitions.StepDefsVersionTest.the_client_receives_server_version_body(java.lang.String)"
             },
             "keyword": "Then "
           }
@@ -138,6 +139,157 @@
     "id": "the-message-can-be-retrieved",
     "keyword": "Feature",
     "uri": "file:src/test/resources/features/baelung.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-08-12T14:49:05.658Z",
+        "line": 4,
+        "name": "Save employee details to the database",
+        "description": "",
+        "id": "create-employee;save-employee-details-to-the-database",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 19000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user wants to create an employee with the following attributes",
+            "match": {
+              "location": "com.cucumber.definitions.StepDefsEmployeeTest.the_create_employee(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "firstName",
+                  "lastName",
+                  "dateOfBirth",
+                  "startDate",
+                  "employmentType",
+                  "email"
+                ]
+              },
+              {
+                "cells": [
+                  "100",
+                  "Rachel",
+                  "Green",
+                  "1990-01-01",
+                  "2018-01-01",
+                  "Permanent",
+                  "rachel.green@fs.com"
+                ]
+              },
+              {
+                "cells": [
+                  "101",
+                  "Michel",
+                  "Green",
+                  "1991-01-01",
+                  "2019-01-01",
+                  "Permanent",
+                  "michel.green@fs.com"
+                ]
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "with the following phone numbers",
+            "match": {
+              "location": "com.cucumber.definitions.StepDefsEmployeeTest.the_phone_lists(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "type",
+                  "isdCode",
+                  "phoneNumber",
+                  "extension"
+                ]
+              },
+              {
+                "cells": [
+                  "102",
+                  "Mobile",
+                  "+1",
+                  "2141112222",
+                  ""
+                ]
+              },
+              {
+                "cells": [
+                  "103",
+                  "Office",
+                  "+1",
+                  "8362223000",
+                  "333"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 304000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user saves the new employee \u0027WITH ALL REQUIRED FIELDS\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027WITH ALL REQUIRED FIELDS\u0027",
+                  "offset": 28
+                }
+              ],
+              "location": "com.cucumber.definitions.StepDefsEmployeeTest.saves_the_new_employee(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the save \u0027IS SUCCESSFUL\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027IS SUCCESSFUL\u0027",
+                  "offset": 9
+                }
+              ],
+              "location": "com.cucumber.definitions.StepDefsEmployeeTest.the_save_is_success_or_not(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Test4"
+          }
+        ]
+      }
+    ],
+    "name": "Create Employee",
+    "description": "",
+    "id": "create-employee",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/employee.feature",
     "tags": []
   }
 ]

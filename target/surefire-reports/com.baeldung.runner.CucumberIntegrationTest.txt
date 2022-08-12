@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.baeldung.runner.CucumberIntegrationTest
--------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.803 s - in com.baeldung.runner.CucumberIntegrationTest
