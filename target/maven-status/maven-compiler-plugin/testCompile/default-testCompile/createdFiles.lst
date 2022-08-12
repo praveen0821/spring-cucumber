@@ -1,0 +1,12 @@
+com\baeldung\definitions\CucumberGlueTest.class
+com\baeldung\utility\ResponseResults.class
+com\baeldung\utility\HeaderSettingRequestCallback.class
+com\baeldung\definitions\StepDefsVersionTest.class
+com\baeldung\utility\RestTemplateUtility.class
+com\baeldung\runner\SpringContextTest.class
+com\baeldung\definitions\StepDefsEmployeeTest.class
+com\baeldung\runner\CucumberIntegrationTest.class
+com\baeldung\utility\RestTemplateUtility$1.class
+com\baeldung\utility\RestTemplateUtility$ResponseResultErrorHandler.class
+com\baeldung\definitions\StepDefsHelloTest.class
+com\baeldung\definitions\StepDefsIntegrationTest.class

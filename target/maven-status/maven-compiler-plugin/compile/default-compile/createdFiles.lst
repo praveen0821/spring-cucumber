@@ -1,0 +1,8 @@
+com\baeldung\controller\BaeldungController.class
+com\baeldung\SpringDemoApplication.class
+com\baeldung\repository\EmployeeRepository.class
+com\baeldung\service\EmployeeService.class
+com\baeldung\controller\EmployeeController.class
+com\baeldung\entity\EmployeeEntity.class
+com\baeldung\entity\PhoneEntity.class
+com\baeldung\controller\VersionController.class

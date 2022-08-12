@@ -1,0 +1,143 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-08-12T14:28:24.416Z",
+        "line": 4,
+        "name": "client makes call to POST /baeldung",
+        "description": "",
+        "id": "the-message-can-be-retrieved;client-makes-call-to-post-/baeldung",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 208000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the client calls /baeldung",
+            "match": {
+              "location": "com.baeldung.definitions.StepDefsHelloTest.the_client_issues_POST_hello()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 9000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the baeldung client receives status code of 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 44
+                }
+              ],
+              "location": "com.baeldung.definitions.StepDefsHelloTest.the_baeldung_client_receives_status_code_of(int,java.lang.String)"
+            },
+            "keyword": "Then ",
+            "doc_string": {
+              "line": 7,
+              "value": "new lines added"
+            }
+          },
+          {
+            "result": {
+              "duration": 125000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the client receives server version hello",
+            "match": {
+              "arguments": [
+                {
+                  "val": "hello",
+                  "offset": 35
+                }
+              ],
+              "location": "com.baeldung.definitions.StepDefsVersionTest.the_client_receives_server_version_body(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Test1"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-08-12T14:28:24.872Z",
+        "line": 13,
+        "name": "client makes call to GET /hello",
+        "description": "",
+        "id": "the-message-can-be-retrieved;client-makes-call-to-get-/hello",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 36000000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the client calls /hello",
+            "match": {
+              "location": "com.baeldung.definitions.StepDefsHelloTest.the_client_issues_GET_hello()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the client receives status code of 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 35
+                }
+              ],
+              "location": "com.baeldung.definitions.StepDefsHelloTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the client receives server version hello",
+            "match": {
+              "arguments": [
+                {
+                  "val": "hello",
+                  "offset": 35
+                }
+              ],
+              "location": "com.baeldung.definitions.StepDefsVersionTest.the_client_receives_server_version_body(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Test2"
+          }
+        ]
+      }
+    ],
+    "name": "the message can be retrieved",
+    "description": "",
+    "id": "the-message-can-be-retrieved",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/baelung.feature",
+    "tags": []
+  }
+]
