@@ -1,9 +1,9 @@
 com\cucumber\definitions\CucumberGlueTest.class
 com\cucumber\utility\ResponseResults.class
 com\cucumber\definitions\StepDefsVersionTest.class
-com\cucumber\runner\SpringContextTest.class
 com\cucumber\utility\HeaderSettingRequestCallback.class
 com\cucumber\definitions\StepDefsEmployeeTest.class
+com\cucumber\runner\SpringRunnerTest.class
 com\cucumber\runner\CucumberRunnerTest.class
 com\cucumber\utility\RestTemplateUtility$ResponseResultErrorHandler.class
 com\cucumber\utility\RestTemplateUtility.class
