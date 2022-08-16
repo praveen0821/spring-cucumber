@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.annotation.Validated;
 
+import java.util.List;
+
 @Service
 @Validated
 public class EmployeeService {
@@ -18,6 +20,10 @@ public class EmployeeService {
   @Validated
   public EmployeeEntity create(EmployeeEntity employee) {
     return employeeRepo.save(employee);
+  }
+
+  public List<EmployeeEntity> createListOfEmp(List<EmployeeEntity> employee) {
+    return employeeRepo.saveAll(employee);
   }
 
 }

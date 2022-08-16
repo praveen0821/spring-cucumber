@@ -2,16 +2,15 @@ package com.cucumber.utility;
 
 import com.cucumber.entity.EmployeeEntity;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.*;
 import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.web.client.ResponseErrorHandler;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 //@CucumberContextConfiguration
@@ -20,6 +19,7 @@ public class RestTemplateUtility {
     public static ResponseResults latestResponse = null;
 
     static ResponseEntity<String> responseAsString = null;
+    protected static ResponseEntity<List<EmployeeEntity>> responseAsAllEmpType = null;
     protected static ResponseEntity<EmployeeEntity> responseAsEmpType = null;
 
     @Autowired
@@ -48,9 +48,18 @@ public class RestTemplateUtility {
 
     protected EmployeeEntity postEmployee(String url, EmployeeEntity payload) {
         HttpHeaders headers = new HttpHeaders();
-        HttpEntity<EmployeeEntity> httpEntity = new HttpEntity(payload, headers);
+//        headers.setContentType(MediaType.valueOf(MediaType.APPLICATION_JSON_VALUE));
+        HttpEntity<List<EmployeeEntity>> httpEntity = new HttpEntity(payload, headers);
         responseAsEmpType = restTemplate.postForEntity(url, httpEntity, EmployeeEntity.class);
         return responseAsEmpType.getBody();
+    }
+
+    protected List<EmployeeEntity> postAllEmployees(String url, List<EmployeeEntity> payload) {
+        HttpHeaders headers = new HttpHeaders();
+//        headers.setContentType(MediaType.valueOf(MediaType.APPLICATION_JSON_VALUE));
+        HttpEntity<List<EmployeeEntity>> httpEntity = new HttpEntity(payload, headers);
+        responseAsAllEmpType = restTemplate.exchange(url, HttpMethod.POST, httpEntity, new ParameterizedTypeReference<List<EmployeeEntity>>(){});
+        return responseAsAllEmpType.getBody();
     }
 
     public void executePost(String url) throws IOException {

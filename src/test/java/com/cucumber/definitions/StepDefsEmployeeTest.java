@@ -65,7 +65,11 @@ public class StepDefsEmployeeTest extends RestTemplateUtility {
 
     @When("user saves the new employee {string}")
     public void saves_the_new_employee(String fields) {
-        EmployeeEntity res = postEmployee("http://localhost:8082/employees/create", empList.get(0));
+        List<EmployeeEntity> employeeEntities = new ArrayList<>();
+        employeeEntities.add(empList.get(0));
+        employeeEntities.add(empList.get(1));
+        List<EmployeeEntity> res1 = postAllEmployees("http://localhost:8082/employees/all/create", employeeEntities);
+        EmployeeEntity res2 = postEmployee("http://localhost:8082/employees/create", empList.get(2));
         assertThat(responseAsEmpType.getBody()).isNotNull();
     }
 
