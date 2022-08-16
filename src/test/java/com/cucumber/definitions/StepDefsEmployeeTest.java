@@ -58,9 +58,9 @@ public class StepDefsEmployeeTest extends RestTemplateUtility {
             phone.setPhoneNumber(e.get("phoneNumber"));
             phone.setExtension(e.get("extension"));
             phoneList.add(phone);
-            empList.get(0).setPhones(phoneList);
             System.out.println(phoneList);
         }
+        empList.get(0).setPhones(phoneList);
     }
 
     @When("user saves the new employee {string}")
