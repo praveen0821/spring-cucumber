@@ -12,7 +12,7 @@ public class BaeldungController {
         return "hello";
     }
 
-    @PostMapping("/baeldung")
+    @GetMapping("/baeldung")
     public String sayHelloPost() {
         return "hello";
     }
